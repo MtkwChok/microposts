@@ -8,4 +8,9 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
                     
   has_secure_password
+  
+  # 内容は50文字以下
+  validates :area, length: {maximum: 100}  
+  validates :profile, length: {maximum: 100}
+
 end
