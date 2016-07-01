@@ -12,5 +12,7 @@ class User < ActiveRecord::Base
   # 内容は50文字以下
   validates :area, length: {maximum: 100}  
   validates :profile, length: {maximum: 100}
+  
+  has_many :microposts
 
 end
