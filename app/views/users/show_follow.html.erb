@@ -11,7 +11,7 @@
   <div class="col-md-8">
     <% if @users.any? %>
       <h3><%= @title %></h3>
-      <%= @users.each do |user| %>
+      <% @users.each do |user| %>
         <li>
           <div>
             <%= link_to gravatar_for(user, size: 50), user %>
