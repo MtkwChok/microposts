@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
       @feed_items = current_user.feed_items
       .includes(:user)
       .order(created_at: :desc)
-       .page(params[:page]).per(5)
+      .page(params[:page]).per(5)
       render 'static_pages/home'
     end
   end
